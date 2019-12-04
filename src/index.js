@@ -1,5 +1,5 @@
 import axios from 'axios';
-const typeMethods = { USER: 'USER', REPOS: 'REPOS', ORGS: 'ORGS' }
+const typeMethods = { USER: 'USER', REPOS: 'REPOS', ORGS: 'ORGS', FOLLOW: 'FOLLOW' }
 
 const base = axios.create({
     baseURL: 'https://api.github.com/users'
@@ -19,13 +19,19 @@ const methods = {
     ORGS: async user => {
         const res = await base.get(`/${user}/orgs`);
         return res.data;
-    } 
+    },
+
+    FOLLOW: async user => {
+        const res = await base.get(`/${user}/followers`);
+        return res.data;
+    }
 }
 
 const doGet = (user, method) => {
     try {
         const methodCallback = methods[method];
-        return methodCallback(user);
+        const res = methodCallback(user)
+        return res;
     } catch (e) {
         console.error(e);
         return { message: `Network error: ${e}`}
@@ -44,4 +50,8 @@ export const gitOrgs = user => {
     return doGet(user, typeMethods.ORGS);
 }
 
-export default { gitUser, gitRepos, gitOrgs }
+export const gitFollowers = user => {
+    return doGet(user, typeMethods.FOLLOW);
+}
+
+export default { gitUser, gitRepos, gitOrgs, gitFollowers }
