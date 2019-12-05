@@ -1,5 +1,5 @@
 {
-  "name": "githubapi-cli",
+  "name": "api-github-cli",
   "version": "0.0.2",
   "description": "API simples para facilitar o consumo dos serviços da API do GitHub.",
   "main": "src/index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allcantara/githubapi-cli.git"
+    "url": "git+https://github.com/allcantara/api-github-cli.git"
   },
   "keywords": [
     "github",
@@ -23,9 +23,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/allcantara/githubapi-cli/issues"
+    "url": "https://github.com/allcantara/api-github-cli/issues"
   },
-  "homepage": "https://github.com/allcantara/githubapi-cli#readme",
+  "homepage": "https://github.com/allcantara/api-github-cli#readme",
   "dependencies": {
     "axios": "^0.19.0"
   }
