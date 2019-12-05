@@ -1,6 +1,6 @@
 {
   "name": "githubapi-cli",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "API simples para facilitar o consumo dos serviços da API do GitHub.",
   "main": "src/index.js",
   "scripts": {
