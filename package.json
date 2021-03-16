@@ -4,7 +4,8 @@
   "description": "API simples para facilitar o consumo dos serviços da API do GitHub.",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
   },
   "repository": {
     "type": "git",
